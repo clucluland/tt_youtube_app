@@ -7,23 +7,12 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: MyHomePage(),
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('TT Youtube Sample App'),
-      ),
-      body: Center(
-        child: Container(),
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('TT Youtube Sample App'),
+        ),
+        body: Container(),
       ),
     );
   }
