@@ -39,26 +39,43 @@ class MyApp extends StatelessWidget {
         ),
         body: Container(
           child: Column(
-            children: <Widget>[
-              Image.network(
-                  'https://icooon-mono.com/i/icon_11354/icon_113541_64.png'),
-              Column(
-                children: <Widget>[
-                  const Text(
-                    'KBOYのFlutter大学',
-                  ),
-                  TextButton(
-                    onPressed: () {
-                      // todo
-                    },
-                    child: Row(
-                      children: const <Widget>[
-                        Icon(Icons.video_call),
-                        Text('登録する'),
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  children: <Widget>[
+                    SizedBox(
+                      width: 60,
+                      height: 60,
+                      child: Image.network(
+                          'https://icooon-mono.com/i/icon_11354/icon_113541_64.png'),
+                    ),
+                    const SizedBox(
+                      width: 16,
+                    ),
+                    Column(
+                      children: <Widget>[
+                        const Text(
+                          'KBOYのFlutter大学',
+                        ),
+                        TextButton(
+                          onPressed: () {
+                            // todo
+                          },
+                          child: Row(
+                            children: const <Widget>[
+                              Icon(
+                                Icons.video_call,
+                                color: Colors.red,
+                              ),
+                              Text('登録する'),
+                            ],
+                          ),
+                        )
                       ],
                     ),
-                  )
-                ],
+                  ],
+                ),
               ),
             ],
           ),
