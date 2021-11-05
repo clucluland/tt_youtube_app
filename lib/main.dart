@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
           centerTitle: false,
           leading: const Icon(Icons.videocam),
           title: const Text(
-            'KBOYのFlutter大学',
+            'Flutter Study Project',
           ),
           actions: <Widget>[
             SizedBox(
@@ -56,9 +56,20 @@ class MyApp extends StatelessWidget {
                       width: 16,
                     ),
                     Column(
+                      children: const <Widget>[
+                        Text('add text'),
+                        Text('add text second'),
+                        Icon(
+                          Icons.access_alarm,
+                          color: Colors.blueGrey,
+                        ),
+                        Text('!!'),
+                      ],
+                    ),
+                    Column(
                       children: <Widget>[
                         const Text(
-                          'KBOYのFlutter大学',
+                          'Flutter Study Movie',
                         ),
                         TextButton(
                           onPressed: () {
