@@ -1,11 +1,14 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
+import 'package:tt_youtube_app/video_detail_page.dart';
 
 void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  final items = List<String>.generate(10000, (i) => "Item $i");
+  final items = List<String>.generate(10000, (i) => "No. $i");
 
   @override
   Widget build(BuildContext context) {
@@ -95,7 +98,39 @@ class MyApp extends StatelessWidget {
                   itemCount: items.length,
                   itemBuilder: (context, index) {
                     return ListTile(
-                      title: Text(items[index]),
+                      onTap: () async => await Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => VideoDetailPage(),
+                        ),
+                      ),
+                      contentPadding: const EdgeInsets.all(6),
+                      leading: Image.network(
+                          'https://icooon-mono.com/i/icon_10848/icon_108481_64.png'),
+                      title: Column(
+                        children: <Widget>[
+                          const Text(
+                            '1項目目',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                          Row(
+                            children: [
+                              const Text(
+                                '説明 ',
+                                style: TextStyle(
+                                  fontSize: 18,
+                                  fontStyle: FontStyle.italic,
+                                  color: Colors.deepOrange,
+                                ),
+                              ),
+                              Text('Data ' + items[index]),
+                            ],
+                          ),
+                        ],
+                      ),
+                      trailing: const Icon(Icons.more_vert),
                     );
                   },
                 ),
