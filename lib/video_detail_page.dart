@@ -5,7 +5,30 @@ class VideoDetailPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: Container(),
+      body: Container(
+        child: Row(
+          children: [
+            const SizedBox(
+              width: 90,
+              height: 90,
+              child: Center(
+                child: Text('画面遷移'),
+              ),
+            ),
+            Column(
+              children: [
+                Text('Tigers'),
+                Text('Carp'),
+              ],
+            ),
+            Row(
+              children: [
+                Text('Rowの中'),
+              ],
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

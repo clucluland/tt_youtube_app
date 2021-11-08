@@ -122,7 +122,7 @@ class MyApp extends StatelessWidget {
                                 style: TextStyle(
                                   fontSize: 18,
                                   fontStyle: FontStyle.italic,
-                                  color: Colors.deepOrange,
+                                  color: Colors.deepPurple,
                                 ),
                               ),
                               Text('Data ' + items[index]),
